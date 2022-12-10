@@ -1,0 +1,108 @@
+$theme_dark:#3E60E9;
+$theme_light:#13D5FB;
+$light_grey:#EAEAEB;
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    min-width: 750px;
+}
+h1, h2, h3, .button {
+    font-family: 'Lora', 'serif';
+    text-transform: uppercase;
+}
+
+header{
+    padding: 1em 0;
+    background-color: $theme_dark;
+    color: white;
+    .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .navbar a{
+        color: white;
+        text-transform: uppercase;
+        text-decoration: none;
+        margin: 0 1em;
+    }
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.button {
+    background-color: $theme_light;
+    padding: 0.5em 1em;
+    border: 0;
+    color: white;
+    border-radius: .5em;
+    font-size: 1.2em;
+    text-decoration: none;
+}
+main{
+    .hero{
+        background: url('../assets/hero.png') center;
+        background-size: cover;
+        height: 80vh;
+    }
+    .banner {
+        margin-top: -12em;
+        display: grid;
+        place-content: center;
+        .button-wrapper{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .description{
+            background-color: white;
+            max-width: 50vw;
+            padding: 2em 4em 4em 4em;
+            margin-top: 2em;
+            text-align:center;
+            line-height: 1.5;
+            border-radius: 1em;
+        }
+    }
+    .news{
+        background-color: $light_grey;
+        padding: 2em;
+        h2 {
+            text-align:center;
+            margin-bottom: 2em;
+        }
+        ul, li {
+            list-style-type: none;
+        }
+        ul {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-gap: 2em;
+        }
+    }
+    .activity{
+        padding: 4em 0;
+        .image{
+            text-align:right;
+        }
+        .description{
+            padding: 2em;
+            background-color: $light_grey;
+            width: 50vw;
+            max-width: 800px;
+            position: relative;
+            bottom: 150px;
+            left: 150px;
+        }
+    }
+}
+
+footer{
+    background-color: $theme_dark;
+    padding: 2em;
+    text-align:center;
+}
